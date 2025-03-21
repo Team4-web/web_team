@@ -82,14 +82,14 @@ nav {
 
 #menu-items {
     display: flex;
-    flex-direction: column; /* Makes items stack in a column */
-    align-items: center; /* Centers items horizontally */
+    flex-direction: row; 
+    align-items: center; 
     list-style: none;
     padding: 0;
 }
 
 #menu-items li {
-    margin: 10px 0; /* Adds spacing between menu items */
+    margin: 10px 0;
 }
 
 #menu-items li a {
