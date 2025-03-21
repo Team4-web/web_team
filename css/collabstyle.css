@@ -77,16 +77,12 @@ header {
     justify-content: center;
 }
 
-nav {
-    width: 100%;
-}
-
 #menu-items {
     display: flex;
     flex-direction: row; 
     align-items: center; 
     list-style: none;
-    padding: 0;
+    padding: 10px;
 }
 
 #menu-items li a:hover {
