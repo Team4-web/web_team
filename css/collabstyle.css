@@ -71,11 +71,42 @@ header {
     background-color: cyan;
 }
 
-.navbar{
+.navbar {
     display: flex;
-    align-items: center;
-    padding: 20px;
-} 
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+}
+
+#menu-items {
+    display: flex;
+    flex-direction: column; /* Makes items stack in a column */
+    align-items: center; /* Centers items horizontally */
+    list-style: none;
+    padding: 0;
+}
+
+#menu-items li {
+    margin: 10px 0; /* Adds spacing between menu items */
+}
+
+#menu-items li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#menu-items li a:hover {
+    background-color: cyan;
+}
+
 
 main {
     padding: 20px;
