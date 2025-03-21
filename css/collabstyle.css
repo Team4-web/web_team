@@ -16,6 +16,10 @@ header {
     position: relative;
 }
 
+section {
+    padding: 10vw;
+}
+
 .top-bar {
     display: flex;
     justify-content: space-between;
