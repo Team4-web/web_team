@@ -1,0 +1,264 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork Details</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/painting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="top-bar">
+            <div class="header-left">
+                <div class="search-container">
+                    <input type="text" placeholder="Search">
+                </div>
+                <button class="icon-btn">
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+            </div>
+            
+            <div class="logo">
+                <button href="index.html" class="logo-placeholder">Art Gallery</button>
+            </div>
+            
+            <div class="header-right">
+                <button class="user-btn"><i class="fas fa-user"></i></button>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+
+        <nav class="bottom-line">
+            <div class="category-tabs">
+                <a href="categories.html" class="category-btn">CATEGORIES</a>
+                <a href="exhibition.html" class="category-btn">EXHIBITIONS</a>
+                <a href="collaborations.html" class="category-btn">COLLABORATIONS</a>
+                <a href="essential.html" class="category-btn">ESSENTIAL</a>
+                <a href="new.html" class="category-btn">NEW</a>
+            </div>
+        </nav>
+    </header>   
+
+    <main class="main-content">
+        <div class="back-home">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Home</a>
+        </div>
+        
+        <section class="painting-details">
+            <div class="painting-image-container">
+                <img id="paintingImage" src="" alt="Artwork" class="painting-image">
+            </div>
+            
+            <div class="painting-info">
+                <h1 id="paintingTitle" class="painting-title"></h1>
+                <p id="paintingArtist" class="painting-artist"></p>
+                
+                <div class="price-container">
+                    <span class="price-label">Price:</span>
+                    <span id="paintingPrice" class="price"></span>
+                </div>
+                
+                <div class="description">
+                    <h3>Description</h3>
+                    <p id="paintingDescription"></p>
+                </div>
+                
+                <div class="details">
+                    <h3>Details</h3>
+                    <ul id="paintingDetails"></ul>
+                </div>
+                
+                <button id="addToCartBtn" class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <button class="footer-btn">SUPPORT</button>
+            <button class="footer-btn">ABOUT US</button>
+            <button class="footer-btn">CONTACT US</button>
+            <button class="footer-btn">FAQ</button>
+            <button class="footer-btn">DELIVERY</button>
+            <button class="footer-btn">RETURN AND EXCHANGE</button>
+        </div>
+        <div class="footer-center">
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-apple-pay"></i>
+            </div>
+            <div class="social-media">
+                <img src="paintings/square-facebook-brands.svg" alt="facebook" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+                <img src="./paintings/instagram-brands.svg" alt="instagram" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+                <img src="./paintings/square-twitter-brands.svg" alt="twitter" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-logo">ART GALLERY</div>
+            <div class="location-info">
+                <p>Ikh surguuliin gudamj J-1, Ulaanbaatar, Mongolia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/painting.js"></script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="./css/Product.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="top-bar">
+            <div class="header-left">
+                <div class="search-container">
+                    <input type="text" placeholder="Search">
+                </div>
+                <button class="icon-btn">
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+            </div>
+            
+            <div class="logo">
+                <button href="index.html" class="logo-placeholder">Art Gallery</button>
+            </div>
+            
+            <div class="header-right">
+                <button class="user-btn"><i class="fas fa-user"></i></button>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+
+        <nav class="bottom-line">
+            <div class="category-tabs">
+                <a href="categories.html" class="category-btn">CATEGORIES</a>
+                <a href="exhibition.html" class="category-btn">EXHIBITIONS</a>
+                <a href="collaborations.html" class="category-btn">COLLABORATIONS</a>
+                <a href="essential.html" class="category-btn">ESSENTIAL</a>
+                <a href="new.html" class="category-btn">NEW</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="product-container">
+        <div class="product-gallery">
+            <img id="mainImage" src="zolboo1.png" alt="Zolboo">
+            <div class="thumbnails">
+                <img src="zolboo1.png" onclick="changeImage(this)">
+                <img src="zolboo2.jpg" onclick="changeImage(this)">
+                <img src="zolboo3.png" onclick="changeImage(this)">
+                <img src="zolboo1.png" onclick="changeImage(this)">
+            </div>
+        </div>
+        <div class="product-details">
+            <h2>Золбоо</h2>
+            <p class="price">120$</p>
+            <p class="description">
+                The Winged Victory of Samothrace, a masterpiece of Hellenistic sculpture, is now available as a high-quality white resin replica.
+            </p>
+
+            <div class="buttons">
+                <button id="addToCart">Add to Cart</button>
+                <button id="addToFavorites">♡</button>
+            </div>
+
+            <ul class="product-info">
+                <li>Хэмжээ: 70 х 70 см</li>
+                <li>Техник: Холимог технологи</li>
+                <li>Материал: Цаас</li>
+                <li>SKU: EN2501</li>
+            </ul>
+            <p class="description">
+                The Winged Victory of Samothrace, a masterpiece of Hellenistic sculpture, is now available as a high-quality white resin replica.
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="info-section">
+        <img src="enuum.jpg" alt="Vincent van Gogh" class="info-image">
+        
+        <p class="info-text">
+            <b>Зураач: С. Энүүм </b><br>
+            Зураач, урлагийн бүтээлч 
+        </p>
+    </div>
+    
+
+    <h2 class="related-title">Related Products</h2>
+    <div class="related-products">
+        <div class="related-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-5-zTiaA7vggKCTNTHQvZWnj5FGeRrE8Wg&s" alt="Sculpture 1">
+            <p>Sculpture Name 1</p>
+            <p class="price">$80</p>
+        </div>
+        <div class="related-item">
+            <img src="https://www.nga.gov/collection/art-object-page.51144.html" alt="Sculpture 2">
+            <p>Sculpture Name 2</p>
+            <p class="price">$95</p>
+        </div>
+        <div class="related-item">
+            <img src="https://cdn.sanity.io/images/cxgd3urn/production/8e13927c2332568d343ac1453e33a30b87cf239b-2880x3606.webp?w=1920&h=2404&q=85&fit=crop&auto=format" alt="Sculpture 3">
+            <p>Sculpture Name 3</p>
+            <p class="price">$110</p>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-section">
+            <h4 style="margin-top: 20px;">SUPPORT</h4>
+            <a href="#" style="color:white">About Us</a>
+            <a href="#" style="color:white">Contact Us</a>
+            <a href="#" style="color:white">Delivery</a>
+            <a href="#" style="color:white">Return and Exchange</a>
+        </div>
+        <div class="footer-section">
+            <h4 style="margin-top: 20px;">PAYMENT METHOD</h4>
+            <div class="payment-methods">
+                <img src="paintings/cc-visa-brands.svg" alt="visa" width="75px" height="55px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);">
+                <img src="paintings/cc-paypal-brands.svg" alt="paypal" width="75px" height="55px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);">
+            </div>
+            <div class="payment-methods">
+                <img src="paintings/cc-mastercard-brands.svg" alt="mastercard" width="75px" height="55px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);">
+                <img src="paintings/cc-apple-pay-brands.svg" alt="applepay" width="75px" height="55px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);">
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4 style="margin-top: 20px;">FOLLOW US</h4>
+            <div class="social-icons">
+                
+                <img src="paintings/square-facebook-brands.svg" alt="facebook" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+                <img src="./paintings/instagram-brands.svg" alt="instagram" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+                <img src="./paintings/square-twitter-brands.svg" alt="twitter" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+            </div>
+            <a href="#">Feedback</a>
+            <div class="rating">★★★★★</div>
+        </div>
+        <div class="footer-section">
+            <div class="logo" style="margin-top: 5px;">Art Gallery</div>
+            <div class="location">
+                <p>IKH SURGUULIIN GUDAMJ-1<br>P.O.BOX -46A/523, 14201<br>ULAANBAATAR, MONGOLIA</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; copyright</p>
+        </div>
+    </div>
+
+    <script src="Product.js"></script>
+</body>
+</html>
