@@ -1,0 +1,190 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 20vw;  /* Initial width as percentage of viewport width */
+    height: 20vw; /* Square shape based on the viewport width */
+    top: 38%; /* Center vertically */
+    transform: translate(-50%, -50%) perspective(1000px);
+    transform-style: preserve-3d;
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+    background-position: center center;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+    max-width: 90vw; /* Ensure the slider doesn’t exceed 90% of the viewport width */
+    max-height: 90vh; /* Ensure the slider doesn’t exceed 90% of the viewport height */
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(calc(40vw)); /* 50vw here for proportional scaling */
+    transition: transform 0.3s ease;
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5vw;
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 8vw;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+    transition: font-size 0.3s ease;
+}
+
+.banner .content h1::after {
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+
+.banner .content .author {
+    font-family: Poppins;
+    text-align: center;
+    max-width: 200px;
+}
+
+.banner .content h2 {
+    font-size: 3em;
+}
+
+.banner .content .model {
+    background-image: url(new1.jpg);
+    width: 100%;
+    height: 50px;
+    margin-top: -70px;
+    top: 40%;
+    left: 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+    transition: height 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .banner .slider {
+        width: 22vw; /* 25% of the viewport width */
+        height: 25vw; /* Keep it square */
+    }
+
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(calc(38vw)); /* Scale translateZ dynamically */
+    }
+
+    .banner .content h1 {
+        font-size: 9vw;
+    }
+
+    .banner .content h2 {
+        font-size: 2.5em;
+    }
+
+    .banner .content .model {
+        height: 70vh;
+    }
+}
+@media (max-width: 624px) {
+    .banner .slider {
+        width: 20vw; /* 30% of the viewport width */
+        height: 25vw; /* Keep it square */
+    }
+
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(calc(34vw)); /* Even smaller translateZ */
+    }
+
+    .banner .content h1 {
+        font-size: 11vw;
+    }
+
+    .banner .content h2 {
+        font-size: 2em;
+    }
+
+    .banner .content .model {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner .slider {
+        width: 20vw; /* 30% of the viewport width */
+        height: 32vw; /* Keep it square */
+    }
+
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(calc(36vw)); /* Even smaller translateZ */
+    }
+
+    .banner .content h1 {
+        font-size: 11vw;
+    }
+
+    .banner .content h2 {
+        font-size: 2em;
+    }
+
+    .banner .content .model {
+        height: 50vh;
+    }
+}
