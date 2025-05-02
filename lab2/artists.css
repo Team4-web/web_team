@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: white;
+    color: black;
+}
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 15px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+.header-left {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 100px;
+    flex: 1;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    background-color: white;
+    height: 30px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.header-right {
+    grid-column: 3;
+    gap: 15px;
+    padding-right: 100px;
+    justify-content: right;
+    display: flex;
+}
+.logo {
+    grid-column: 2;
+    padding: 10px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-position: center;
+    font-size: 40px;
+    color: white;
+}
+.artist-info {
+    padding: 30px 100px;
+    text-align: center;
+    column-gap: 5px;
+    background-color: #1a1a1a;
+    color: white;
+}
+.btn {
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+}
+.categories {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.category-select {
+    background-color: #d9d9d9;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: flex-start;
+    height: 20px;
+    margin-top: 20px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 0 100px;
+}
+.product {
+    text-align: center;
+    background-color: white;
+    padding: 10px, 100px;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.pagination a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: white;
+}
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 50px 100px;
+    text-align: left;
+}
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.footer .logo {
+    background: none;
+    font-size: 24px;
+    color: white;
+    text-align: right;
+}
+.copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgb(68, 68, 68);
+}

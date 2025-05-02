@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - New Arrivals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="top-bar">
+            <div class="header-left">
+                <div class="search-container">
+                    <input type="text" placeholder="Search">
+                </div>
+                <button class="icon-btn">
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+            </div>
+            
+            <div class="logo">
+                <button href="index.html" class="logo-placeholder">Art Gallery</button>
+            </div>
+            
+            <div class="header-right">
+                <button class="user-btn"><i class="fas fa-user"></i></button>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+
+        <nav class="bottom-line">
+            <div class="category-tabs">
+                <a href="categories.html" class="category-btn">CATEGORIES</a>
+                <a href="exhibition.html" class="category-btn">EXHIBITIONS</a>
+                <a href="collaborations.html" class="category-btn">COLLABORATIONS</a>
+                <a href="essential.html" class="category-btn">ESSENTIAL</a>
+                <a href="new.html" class="category-btn">NEW</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="back-home">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Home</a>
+        </div>
+        
+        <h1 class="new-title">NEW ARRIVALS</h1>
+        
+        <!--<div class="filter-bar">
+            <button class="filter-btn active">All Categories</button>
+            <button class="filter-btn">Artists</button>
+            <button class="filter-btn">Price</button>
+        </div>-->
+
+        <div class="container">
+    
+            <label for="categoryFilter"></label>
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Монгол зураг">Монгол зураг</option>
+                <option value="Чимэглэлийн">Sculpting</option>
+                <option value="Абстракт">Абстракт</option>
+                <option value="Цуврал">Цуврал</option>
+            </select>
+    
+            <label for="artistFilter"></label>
+            <select id="artistFilter">
+                <option value="All">All Artists</option>
+                <option value="О.Доржготов">О.Доржготов</option>
+                <option value="Д.Дуулал">Д.Дуулал</option>
+                <option value="Artist C">Ш.Тамир</option>
+            </select>
+    
+            <label for="priceFilter"></label>
+            <select id="priceFilter">
+                <option value="All">All Prices</option>
+                <option value="0-50">$0 - $50</option>
+                <option value="51-150">$51 - $150</option>
+                <option value="150-2000">$150 - $2000</option>
+            </select>
+    
+            <div id="workshopsGrid" class="grid"></div>
+        </div>
+        
+        <div class="results-header">
+            <div class="results-count">24 New Products</div>
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+                <button class="page-btn">6</button>
+                <button class="page-btn">7</button>
+                <button class="page-btn">8</button>
+                <button class="page-btn">9</button>
+                <button class="page-btn">></button>
+                <button class="page-btn">></button>
+            </div>
+        </div>
+        
+        <section class="new-artworks">
+            <div class="artwork" data-artwork="1">
+                <img src="images/new1.jpeg" alt="Decomposition VI">
+                <h3>Decomposition VI</h3>
+            </div>
+            <div class="artwork" data-artwork="2">
+                <img src="images/new2.jpeg" alt="Urban Echo">
+                <h3>Urban Echo</h3>
+            </div>
+            <div class="artwork" data-artwork="3">
+                <img src="images/new3.jpeg" alt="Silent Waves">
+                <h3>Silent Waves</h3>
+            </div>
+            <div class="artwork" data-artwork="4">
+                <img src="images/new4.jpeg" alt="Golden Ratio">
+                <h3>Golden Ratio</h3>
+            </div>
+            
+            <div class="artwork" data-artwork="5">
+                <img src="images/new5.jpg" alt="Abstract Thoughts">
+                <h3>Abstract Thoughts</h3>
+            </div>
+            <div class="artwork" data-artwork="6">
+                <img src="images/new6.jpg" alt="Color Symphony">
+                <h3>Color Symphony</h3>
+            </div>
+            <div class="artwork" data-artwork="7">
+                <img src="images/new7.jpg" alt="Metropolis">
+                <h3>Metropolis</h3>
+            </div>
+            <div class="artwork" data-artwork="8">
+                <img src="images/new8.jpg" alt="Organic Forms">
+                <h3>Organic Forms</h3>
+            </div>
+            
+            <div class="artwork" data-artwork="9">
+                <img src="images/new9.jpg" alt="Light Play">
+                <h3>Light Play</h3>
+            </div>
+            <div class="artwork" data-artwork="10">
+                <img src="images/new10.jpg" alt="Deep Space">
+                <h3>Deep Space</h3>
+            </div>
+            <div class="artwork" data-artwork="11">
+                <img src="images/new11.jpg" alt="Cultural Tapestry">
+                <h3>Cultural Tapestry</h3>
+            </div>
+            <div class="artwork" data-artwork="12">
+                <img src="images/new12.jpg" alt="Minimalist">
+                <h3>Minimalist</h3>
+            </div>
+        </section>
+        
+        <div class="pagination bottom-pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn">5</button>
+            <button class="page-btn">6</button>
+        </div>
+    </main>
+
+    <div class="footer">
+        <div class="footer-section">
+            <h4 style="margin-top: 20px;">SUPPORT</h4>
+            <a href="#" style="color:white">About Us</a>
+            <a href="#" style="color:white">Contact Us</a>
+            <a href="#" style="color:white">Delivery</a>
+            <a href="#" style="color:white">Return and Exchange</a>
+        </div>
+        <div class="footer-section">
+            <h4 style="margin-top: 20px;">PAYMENT METHOD</h4>
+            <div class="payment-methods">
+                <img src="paintings/cc-visa-brands.svg" alt="visa" width="75px" height="55px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);">
+                <img src="paintings/cc-paypal-brands.svg" alt="paypal" width="75px" height="55px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);">
+            </div>
+            <div class="payment-methods">
+                <img src="paintings/cc-mastercard-brands.svg" alt="mastercard" width="75px" height="55px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);">
+                <img src="paintings/cc-apple-pay-brands.svg" alt="applepay" width="75px" height="55px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);">
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4 style="margin-top: 20px;">FOLLOW US</h4>
+            <div class="social-icons">
+                
+                <img src="paintings/square-facebook-brands.svg" alt="facebook" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+                <img src="./paintings/instagram-brands.svg" alt="instagram" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+                <img src="./paintings/square-twitter-brands.svg" alt="twitter" width="45px" height="45px" style="filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);"/>
+            </div>
+            <a href="#">Feedback</a>
+            <div class="rating">★★★★★</div>
+        </div>
+        <div class="footer-section">
+            <div class="logo" style="margin-top: 5px;">Art Gallery</div>
+            <div class="location">
+                <p>IKH SURGUULIIN GUDAMJ-1<br>P.O.BOX -46A/523, 14201<br>ULAANBAATAR, MONGOLIA</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; copyright</p>
+        </div>
+    </div>
+    
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/new.js"></script>
+</body>
+</html>
