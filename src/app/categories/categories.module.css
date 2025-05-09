@@ -1,0 +1,268 @@
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header and Filtering Section */
+.headerContainer {
+  background-color: #1a1a1a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.filterSection {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 15px 30px;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterColumn {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.filterColumn h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.filterColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filterColumn ul li {
+  margin-bottom: 5px;
+}
+
+.filterColumn ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.filterColumn ul li a:hover {
+  text-decoration: underline;
+  color: #1e90ff;
+}
+
+.filterColumn ul li a.active {
+  color: #1e90ff;
+}
+
+.BackBtn{
+  display: none; 
+  margin: 20px 0;
+}
+/* Categories Section */
+.categories {
+  text-align: start;                        
+  background-color: white;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.categories h2 {
+  padding-left: 45px;
+  margin-bottom: 20px;
+}
+
+.categoryList {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.category {
+  text-align: center;
+  flex: 1;
+  max-width: 250px;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.categoryImage {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Artists Section */
+.artists {
+  text-align: start;
+  font-size: 36px;
+  font-family: 'Inter', sans-serif;
+  padding: 20px 50px;
+  background-color: #e5e5e5c3;
+}
+
+/* Collaboration Section */
+.collaboration {
+  text-align: start;
+  padding: 20px 0;
+  background: white;
+}
+
+.collaboration h2 {
+  padding-left: 45px;
+  margin-bottom: 20px;
+}
+
+.collabList {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 15px;
+}
+
+.collabImage {
+  flex: 1;
+  max-width: 300px;
+  height: 200px;
+  position: relative;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 50px 100px;
+  text-align: left;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerSection h4 {
+  margin-top: 20px;
+}
+
+.footerSection a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerSection a:hover {
+  text-decoration: underline;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.paymentIcon, .socialIcon {
+  filter: invert(94%) sepia(10%) saturate(737%) hue-rotate(253deg) brightness(105%) contrast(105%);
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.footerLogo {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.location p {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.rating {
+  color: gold;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgb(68, 68, 68);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .filterSection {
+    flex-wrap: wrap;
+  }
+  
+  .filterColumn {
+    flex-basis: 33.33%;
+    margin-bottom: 20px;
+  }
+  
+  .categoryList, .collabList {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .filterColumn {
+    flex-basis: 50%;
+  }
+  
+  .category {
+    flex-basis: 45%;
+  }
+  
+  .footer {
+    padding: 30px 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .BackBtn{
+    display: block;
+  }
+  .filterColumn {
+    flex-basis: 100%;
+  }
+  
+  .category, .collabImage {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+}

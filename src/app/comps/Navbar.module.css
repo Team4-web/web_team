@@ -1,0 +1,278 @@
+.header-container {
+  background-color: #1a1a1a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: relative;
+}
+
+/* Hamburger Menu - Always visible, but positioned left */
+.hamburger-container {
+  display: none; /* Hidden on desktop by default */
+  position: relative;
+  z-index: 110;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop Search and Language */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 8px 30px 8px 15px;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 30px;
+  background-color: white;
+  
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-placeholder {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 10px 40px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.search-container input::placeholder {
+  color:#333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.user-btn,
+.wishlist-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.cart-btn {
+  position: relative;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  background-color: #d4bc7a;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-btn:hover {
+  color: #d4bc7a;
+}
+
+/* Desktop Navigation */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+.category-btn {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.category-btn:hover {
+  color: #ccc;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background-color: #1a1a1a;
+  transition: left 0.3s ease;
+  z-index: 105;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 60px 20px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.mobile-search-container {
+  margin-bottom: 15px;
+}
+
+.mobile-search-container input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  background-color: #333;
+  color: white;
+}
+
+.mobile-language-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+  width: 100%;
+  text-align: left;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.mobile-nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 780px) {
+
+  .top-bar {
+    padding: 10px 20px;
+  }
+  
+  .hamburger-container {
+    display: block;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+  
+  .logo-placeholder {
+    font-size: 30px;
+    padding: 5px 10px;
+  }
+  
+  .bottom-line {
+    display: none;
+  }
+  
+  /* Make the right icons smaller with less padding */
+  .header-right {
+    gap: 15px;
+  }
+  
+  .user-btn,
+  .wishlist-btn,
+  .cart-btn {
+    font-size: 14px;
+    padding: 3px;
+  }
+  
+  .cart-count {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    top: -5px;
+    right: -5px;
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+  .top-bar {
+    padding: 8px 15px;
+  }
+  
+  .logo-placeholder {
+    font-size: 24px;
+    padding: 5px;
+  }
+  
+  .header-right {
+    gap: 12px;
+  }
+}

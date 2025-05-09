@@ -1,0 +1,14 @@
+
+.myBodyColor h1 {
+    font-size: 180px;
+}
+
+.container {
+    padding: 80px;
+    background-color: #f0f0f0;
+  }
+  
+  .title {
+    color: red;
+  }
+  

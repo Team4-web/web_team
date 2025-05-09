@@ -1,0 +1,346 @@
+
+/* exhibition.module.css */
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.mainContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.exhibitionsSection {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.exhibitionsSection h1 {
+    margin-bottom: 30px;
+}
+
+/* 3D Banner with Slider */
+.banner {
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    top: 38%;
+    transform: translate(-50%, -50%) perspective(1000px);
+    transform-style: preserve-3d;
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+    background-position: center center;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+    }
+}
+
+.item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(calc(40vw));
+    transition: transform 0.5s ease-in;
+    cursor: pointer;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5vw;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 8vw;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+    transition: font-size 0.3s ease;
+    text-transform: uppercase;
+}
+
+.content h1::after {
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+
+.content h1::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #d4bc7a;
+    overflow: hidden;
+    mix-blend-mode: difference;
+}
+
+.author {
+    font-family: Poppins;
+    text-align: center;
+    max-width: 200px;
+}
+
+.content h2 {
+    font-size: 3em;
+}
+
+.model {
+    background-image: url(/new1.jpg);
+    width: 100%;
+    height: 50px;
+    margin-top: -70px;
+    top: 40%;
+    left: 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+    transition: height 0.3s ease;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.modalContent {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.5s;
+}
+
+.closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closeBtn:hover {
+    color: black;
+}
+
+.modalBody {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.modalBody img {
+    width: 40%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modalInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modalInfo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modalInfo p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.modalDescription {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.backToMain {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d4bc7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.backToMain:hover {
+    background-color: #c1a969;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 780px) {
+    .modalContent {
+        width: 90%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .modalBody {
+        flex-direction: column;
+    }
+
+    .modalBody img {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner .slider {
+        width: 22vw;
+        height: 25vw;
+    }
+
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(calc(38vw));
+    }
+
+    .banner .content h1 {
+        font-size: 9vw;
+    }
+
+    .banner .content h2 {
+        font-size: 2.5em;
+    }
+
+    .banner .content .model {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 624px) {
+    .banner .slider {
+        width: 20vw;
+        height: 25vw;
+    }
+
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(calc(34vw));
+    }
+
+    .banner .content h1 {
+        font-size: 11vw;
+    }
+
+    .banner .content h2 {
+        font-size: 2em;
+    }
+
+    .banner .content .model {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner .slider {
+        width: 20vw;
+        height: 32vw;
+    }
+
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(calc(36vw));
+    }
+
+    .banner .content h1 {
+        font-size: 11vw;
+    }
+
+    .banner .content h2 {
+        font-size: 2em;
+    }
+
+    .banner .content .model {
+        height: 50vh;
+    }
+}

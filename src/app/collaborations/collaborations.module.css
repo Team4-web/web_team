@@ -1,0 +1,302 @@
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+  }
+  
+  .mainContent {
+    flex: 1;
+    margin: 0 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+
+  }
+
+  /* Title */
+  .collaborationsTitle {
+    text-align: center;
+    margin: 30px 0 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1D1B20;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .collaborationsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .collaborationItem {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .collaborationItem:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 350px;
+  }
+  
+  .collabMainImg {
+    object-fit: cover;
+  }
+  
+  .artistBtn {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(29, 27, 32, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+    z-index: 2;
+  }
+  
+  .artistBtn:hover {
+    background-color: #d4bc7a;
+  }
+  
+  .productsCount {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 0;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+  }
+  
+  .pageNumber {
+    color: #1D1B20;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .pageNumber:hover,
+  .pageNumber.active {
+    color: #d4bc7a;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modalContent {
+    background-color: #f9f9f9;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 1000px;
+    position: relative;
+    width: 90%;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1D1B20;
+    transition: color 0.3s;
+  }
+  
+  .closeBtn:hover {
+    color: #d4bc7a;
+  }
+  
+  .modalBody {
+    padding: 20px;
+  }
+  
+  .modalTitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1D1B20;
+  }
+  
+  .productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .productCard {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color: white;
+    padding-bottom: 15px;
+  }
+  
+  .productCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .productImageContainer {
+    position: relative;
+    height: 100%;
+    width: 36vw;
+  }
+  
+  .productImg {
+    object-fit: cover;
+  }
+  
+  .productName {
+    font-weight: 600;
+    color: #1D1B20;
+    margin: 10px 15px 5px;
+  }
+  
+  .productPrice {
+    color: #d4bc7a;
+    font-weight: 700;
+    margin: 0 15px 15px;
+  }
+  
+  .addToCartBtn {
+    margin: 0 15px;
+    background-color: #1D1B20;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: calc(100% - 30px);
+  }
+  
+  .addToCartBtn:hover {
+    background-color: #d4bc7a;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 900px) {
+    .collaborationsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .modalContent {
+      width: 80%;
+    }
+    
+    .productsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainContent {
+      margin: 0 20px;
+    }
+    
+    .collaborationsTitle {
+      font-size: 2rem;
+    }
+    
+    .modalContent {
+      padding: 20px;
+    }
+    
+    .modalBody {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .collaborationsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .productsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .collaborationsTitle {
+      font-size: 1.8rem;
+      margin: 20px 0 30px;
+    }
+    
+    .artistBtn {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+    
+    .productsCount {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mainContent {
+      margin: 0 10px;
+      padding: 15px;
+    }
+    
+    .pagination {
+      gap: 5px;
+    }
+    
+    .pageNumber {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+    
+    .modalContent {
+      width: 95%;
+      padding: 15px;
+    }
+    
+    .productsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 15px;
+    }
+  }
